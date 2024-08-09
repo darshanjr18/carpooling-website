@@ -1,0 +1,21 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Booking</title>
+</head>
+<body>
+    <h1>Confirm Your Booking</h1>
+    <p>Route: {{ booking.route }}</p>
+    <p>Driver: {{ booking.driver }}</p>
+    <p>Booking Time: {{ booking.booking_time }}</p>
+
+    <form method="post">
+      
+        <button type="submit">Confirm Booking</button>
+    </form>
+</body>
+</html>

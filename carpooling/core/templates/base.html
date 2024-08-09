@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="/home">home</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<head>
+    <!-- Other head elements -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpooling Website</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'routes' %}">Routes</a></li>
+            
+        </ul>
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer>
+        <p>&copy; 2024 Carpooling Website</p>
+    </footer>
+<!-- base.html -->
+<footer>
+  <div class="container">
+    <p>© 2024 Your Company</p>
+    <a href="/privacy">Privacy Policy</a> | 
+    <a href="/terms">Terms of Service</a>
+  </div>
+</footer>
+
+
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+
+

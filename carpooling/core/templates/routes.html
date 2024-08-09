@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Routes</title>
+    <link rel="stylesheet" href="{% static 'css/routes.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>hitchAride</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="routes-info">
+                <h2>Available Carpool Routes</h2>
+                <p>Find and book rides along various routes in your city.</p>
+                
+                <!-- Example list of routes -->
+                <ul class="route-list">
+                    
+                    </li><a href="booking.html" class="btn">central line</a></li>
+                    </li><a href="booking.html" class="btn">harbour line</a></li>
+                    </li><a href="booking.html" class="btn">western line</a></li>
+                </ul>
+
+                <!-- Interactive map -->
+                <div id="map" style="height: 400px; width: 100%;"></div>
+            </section>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <h3>hitchAride</h3>
+                        <ul>
+                            <li><a href="#">ABOUT AUTHOR</a></li>
+                            <li><a href="#">Darshan A Jadhav</a></li>
+                            <li><a href="#">btech cse minor in securities and blockchain tech</a></li>
+                            <li><a href="#">follow us on socials to get in touch</a></li>
+                            <li><a href="#">Blog.hitchAride</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Products</h3>
+                        <ul>
+                            <li><a href="#">Ride</a></li>
+                            <li><a href="#">Drive</a></li>
+                            <li><a href="#">rent</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>security</h3>
+                        <ul>
+                            <li><a href="#">Safety</a></li>
+                            <li><a href="#">shared concerns</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>socials</h3>
+                        <ul>
+                            <li><a href="https://www.instagram.com/__.darshan18.__/?next=%2F">instagram</a></li>
+                            <li><a href="https://about.meta.com/metaverse/">facebook</a></li>
+                            <li><a href="https://discord.gg/yjtFgNaH">discord</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy-YW0qXs8ejyx1wy2dlbskX03AFdS0y0&callback=initMap" async defer></script>
+    <script src="{% static 'js/routes.js' %}"></script>
+</body>
+
+</html>

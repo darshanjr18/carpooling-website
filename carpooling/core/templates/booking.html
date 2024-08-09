@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Ride</title>
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}"> <!-- Reuse the same CSS file -->
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>hitchAride</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'routes' %}">Routes</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="booking-box">
+                <h2>Book Your Ride</h2>
+                <form action="{% url 'book_ride' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="pickup-location">Pickup Location</label>
+                        <input type="text" id="pickup-location" name="pickup_location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" name="destination" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ride-date">Date</label>
+                        <input type="date" id="ride-date" name="ride_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ride-time">Time</label>
+                        <input type="time" id="ride-time" name="ride_time" required>
+                    </div>
+                    <button type="submit" class="btn">Book Ride</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 hitchAride. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

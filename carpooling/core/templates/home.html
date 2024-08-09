@@ -1,0 +1,155 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpooling Home</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">hitchAride</div>
+            <nav>
+                <a href="#">contact us</a>
+                <a href="#">Help</a>
+                <a href="#">Business</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <div class="text">
+                <h1>Your wallet and the planet will thank you.</h1>
+                <p>Join hitchAride. Request a ride, hop in, and go!</p>
+                <div class="input-container">
+                    <input type="text" placeholder="Enter pickup location">
+                    <input type="text" placeholder="Enter destination">
+                </div>
+                <a href="{% url 'routes' %}" class="btn">Find Available Cars</a>
+            </div>
+            <div class="carousel">
+                <div id="image-carousel" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide"><img src="{% static 'images/slide1.jpg' %}" alt="Slide 1"></li>
+                            <li class="splide__slide"><img src="{% static 'images/slide2.jpg' %}" alt="Slide 2"></li>
+                            <li class="splide__slide"><img src="{% static 'images/slide3.jpg' %}" alt="Slide 3"></li>
+                            <!-- Add more slides as needed -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <img src="{% static 'images/car1.jpg' %}" alt="Step 1">
+                    <h3>Find a Ride</h3>
+                    <p>Search for rides that match your route and schedule.</p>
+                </div>
+                <div class="step">
+                    <img src="{% static 'images/car2.jpg' %}" alt="Step 2">
+                    <h3>Book a Ride</h3>
+                    <p>Choose your preferred ride and book it easily.</p>
+                </div>
+                <div class="step">
+                    <img src="{% static 'images/car3.jpg' %}" alt="Step 3">
+                    <h3>Enjoy the Journey</h3>
+                    <p>Travel comfortably and contribute to a greener planet.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Testimonials -->
+        <section class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial">
+                <p>"Carpooling has made my commute so much easier and environmentally friendly!"</p>
+                <cite>- Alex M.</cite>
+            </div>
+            <div class="testimonial">
+                <p>"I love the convenience and cost savings of using this carpooling service."</p>
+                <cite>- Priya R.</cite>
+            </div>
+            <div class="testimonial">
+                <p>"i love how efortlessly people can travel without burning gas."</p>
+                <cite>- paras & soham.</cite>
+            </div>
+        </section>
+
+        <!-- New Section: Benefits -->
+        <section class="benefits">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Cost-Effective: Save money on your daily commute.</li>
+                <li>Environmentally Friendly: Reduce your carbon footprint.</li>
+                <li>Convenient: Easy to book and flexible options.</li>
+                <li>Community: Connect with fellow commuters.</li>
+            </ul>
+        </section>
+        <section class="benefits">
+            <h2>make money renting your car</h2>
+            <ul>
+               
+                 <li>Drive when you want, make what you need
+                Make money on your schedule with deliveries or rides—or both..</li> 
+                <li>be the good change. You can use your own car or choose a rental through Uber.</li>
+
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>hitchAride</h3>
+                <ul>
+                    <li><a href="#">ABOUT AUTHOR</a></li>
+                    <li><a href="#">Darshan A Jadhav</a></li>
+                    <li><a href="#">btech cse minor in securities and blockchain tech</a></li>
+                    <li><a href="#">follow us on socials to get in touch</a></li>
+                    <li><a href="#">Blog.hitchAride</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Ride</a></li>
+                    <li><a href="#">Drive</a></li>
+                    <li><a href="#">rent</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>security</h3>
+                <ul>
+                    <li><a href="#">Safety</a></li>
+                    <li><a href="#">shared concerns</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>socials</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/__.darshan18.__/?next=%2F">instagram</a></li>
+                    <li><a href="https://about.meta.com/metaverse/">facebook</a></li>
+                    <li><a href="https://discord.gg/yjtFgNaH">discord</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>

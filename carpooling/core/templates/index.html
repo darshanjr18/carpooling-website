@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<h1>Welcome to the Carpooling Website</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Route</button>
+    </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpooling Website</title>
+</head>
+<section class="hero">
+        <h1>Find Your Perfect Carpool</h1>
+        <p>Join a carpool today and save money while reducing your carbon footprint!</p>
+        <a href="{% url 'routes' %}" class="cta-button">Find Rides</a>
+    </section>
+<body>
+    <h1>Welcome to the Carpooling Website!</h1>
+    <p>This is the home page.</p>
+</body>
+
+</html>
+

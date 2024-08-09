@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Carpooling Website</h1>
+    </header>
+    <div class="slideshow-container" id="loginSlideshow">
+        <div class="mySlides fade">
+            <img src="{% static 'images/slide1.jpg' %}" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'images/slide2.jpg' %}" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'images/slide3.jpg' %}" style="width:100%">
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form method="POST" action="{% url 'home' %}">
+                {% csrf_token %}
+                <div class="textbox">
+                    <input type="text" name="username" placeholder="username" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <input type="submit" class="btn" value="Login">
+            </form>
+            <div id="signupPrompt">
+                <p>Don't have an account? <a href="{% url 'landing' %}" id="signupButton">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+    <section class="info-section">
+        <div class="info-box">
+            <div class="info-slideshow-container">
+                <div class="infoSlides fade">
+                    <img src="{% static 'images/info1.jpg' %}" style="width:100%">
+                    <div class="info-text">
+                        <h3>Why Use Our Carpooling Service?</h3>
+                        <p>Our carpooling service offers affordable rides, reduces traffic congestion, and helps the environment by reducing emissions. Connect with trusted drivers and enjoy a convenient ride-sharing experience.</p>
+                    </div>
+                </div>
+                <div class="infoSlides fade">
+                    <img src="{% static 'images/info2.jpg' %}" style="width:100%">
+                    <div class="info-text">
+                        <h3>About Our Service</h3>
+                        <p>Our platform connects drivers with passengers looking for a ride. Whether you're commuting to work or traveling across town, our service provides a reliable and cost-effective solution.</p>
+                    </div>
+                </div>
+                <div class="infoSlides fade">
+                    <img src="{% static 'images/info3.jpg' %}" style="width:100%">
+                    <div class="info-text">
+                        <h3>How It Works</h3>
+                        <p>Sign up, choose your role as a driver or a passenger, and start connecting with people for shared rides. It's simple, secure, and efficient.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Carpooling Website. All rights reserved.</p>
+            <p>Developed by [Your Name] and Team.</p>
+        </div>
+    </footer>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

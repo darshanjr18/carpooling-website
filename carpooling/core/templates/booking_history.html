@@ -1,0 +1,23 @@
+
+
+<!-- core/templates/core/booking_history.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking History</title>
+</head>
+<body>
+    <h1>Booking History</h1>
+    <ul>
+        {% for booking in bookings %}
+            <li>
+                
+                    <a href="{% url 'confirm_booking' booking.id %}">Confirm Booking</a>
+               
+               
+            </li>
+       
+    </ul>
+</body>
+</html>

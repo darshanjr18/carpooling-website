@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Routes</title>
+</head>
+<body>
+    <h1>Available Routes</h1>
+    <ul>
+        {% for route in routes %}
+            <li>
+                {{ route.start_location }} to {{ route.end_location }}
+                <a href="{% url 'book_route' route.id %}">Book Now</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
